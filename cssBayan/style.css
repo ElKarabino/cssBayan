@@ -1,0 +1,15 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  *,*::before,*::after {
+    box-sizing: inherit;
+  }
+p, h1, h2 {
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.meme_img
