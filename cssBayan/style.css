@@ -8,8 +8,48 @@ html{
 p, h1, h2 {
     margin: 0;
 }
+body {
+    background-color:blanchedalmond;
+}
 .container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 }
-.meme_img
+.title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 100%;
+}
+.line {
+    margin: 2rem 0 2rem 0;
+    border: 0.1rem solid #D2C1C1;
+}
+.meme_description {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.meme_description_text {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 100%;
+    color: blue;
+}
+.meme_description_text:hover {
+    color:black
+}
+.first_line{
+    
+}
+.second_line {
+
+}
+.meme_img {
+    display: block;
+    width: 22rem;
+    height: 28rem;
+    margin: 0 auto;
+}
