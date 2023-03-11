@@ -15,6 +15,18 @@ body {
     max-width: 90%;
     margin: 0 auto;
 }
+div:hover label{
+    color: black;
+}
+div:hover .meme_description_icon {
+    display: block;
+}
+.meme {
+    cursor: pointer;
+}
+.container:hover div.meme_icon {
+    display: block;
+}
 .title {
     font-family: 'Georgia';
     font-style: normal;
@@ -26,30 +38,83 @@ body {
     margin: 2rem 0 2rem 0;
     border: 0.1rem solid #D2C1C1;
 }
-.meme_description {
-    margin-bottom: 30px;
-    margin-top: 30px;
+.meme:last-child {
+    margin-bottom: 2rem;
 }
-.meme_description_text {
+label {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
     line-height: 100%;
     color: blue;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
-.meme_description_text:hover {
-    color:black
+input {
+    display: none;
+}
+article {
+    overflow: hidden;
+    height: 0;
+    z-index: 10;
+    transition: height 1s ease-in-out, box-shadow 1s linear;
+}
+input:checked ~ article {
+    transition: height 1s ease-in-out, box-shadow 1s linear;
+    height: 28rem;
+}
+.meme:hover .memes  {
+    transition: height 1s ease-in-out, box-shadow 1s linear;
+    height: 28rem;
+}
+.meme:hover .first_line {
+    transform: translateY(0) rotate(45deg);
+    transition: 1s;
+}
+.meme:hover .second_line {
+    transform: translateY(-100%) rotate(-45deg);
+    transition: 1s;
+}
+input:checked + span {
+    transform: translateY(50%) rotate(45deg);
+    transition: 1s;
+}
+input:checked + span {
+    transform: translateY(-50%) rotate(-45deg);
+    transition: 1s;
+}
+.meme_icon {
+    display: none;
+    margin-right: 1.2rem;
+}
+.meme_description_icon:hover {
+    display: block;
 }
 .first_line{
-    
+    display: block;
+    background: black;
+    height: 1em;
+    width: 0.1em;
+    transition: 1s;
 }
 .second_line {
-
+    display: block;
+    background: black;
+    height: 1em;
+    width: 0.1em;
+    transform: translateY(-100%) rotate(90deg);
+    transition: 1s;
 }
 .meme_img {
     display: block;
     width: 22rem;
     height: 28rem;
     margin: 0 auto;
+    overflow: hidden;
+    transition: 1s;
+}
+.meme:last-child:hover .meme_img {
+    height: 100%;
 }
