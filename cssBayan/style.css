@@ -15,9 +15,6 @@ body {
     max-width: 90%;
     margin: 0 auto;
 }
-div:hover label{
-    color: black;
-}
 div:hover .meme_description_icon {
     display: block;
 }
@@ -63,11 +60,17 @@ article {
 }
 input:checked ~ article {
     transition: height 1s ease-in-out, box-shadow 1s linear;
-    height: 28rem;
+    height: 28rem;    
+}
+input:checked ~ label {
+    color: black;   
 }
 .meme:hover .memes  {
     transition: height 1s ease-in-out, box-shadow 1s linear;
-    height: 28rem;
+    height: 28rem;  
+}
+.meme:hover >label  {
+    color: black;
 }
 .meme:hover .first_line {
     transform: translateY(0) rotate(45deg);
@@ -84,6 +87,9 @@ input:checked + span {
 input:checked + span {
     transform: translateY(-50%) rotate(-45deg);
     transition: 1s;
+}
+input:checked ~ p {
+    color: black;
 }
 .meme_icon {
     display: none;
@@ -114,7 +120,4 @@ input:checked + span {
     margin: 0 auto;
     overflow: hidden;
     transition: 1s;
-}
-.meme:last-child:hover .meme_img {
-    height: 100%;
 }
