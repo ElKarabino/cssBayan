@@ -70,23 +70,8 @@ input:checked ~ label>article {
 }
 input:checked ~ label {
     color: black;   
-    
 }
-.meme:hover .memes  {
-    transition: height 1s ease-in-out, box-shadow 1s linear;
-    height: 28rem;  
-}
-.meme:hover >label  {
-    color: black;
-}
-.meme:hover .first_line {
-    transform: translateY(0) rotate(45deg);
-    transition: 1s;
-}
-.meme:hover .second_line {
-    transform: translateY(-100%) rotate(-45deg);
-    transition: 1s;
-}
+
 input:checked + span {
     transform: translateY(50%) rotate(45deg);
     transition: 1s;
@@ -97,6 +82,9 @@ input:checked + span {
 }
 input:checked ~ p {
     color: black;
+}
+input:active ~ label {
+    opacity: 0.5;
 }
 .meme_icon {
     display: none;
@@ -129,7 +117,24 @@ input:checked ~ p {
     overflow: hidden;
     transition: 1s;
 }
+@media screen and (min-width: 1280px) {
+.meme:hover .memes  {
+    transition: height 1s ease-in-out, box-shadow 1s linear;
+    height: 28rem;  
+}
+.meme:hover >label  {
+    color: black;
+}
+.meme:hover .first_line {
+    transform: translateY(0) rotate(45deg);
+    transition: 1s;
+}
+.meme:hover .second_line {
+    transform: translateY(-100%) rotate(-45deg);
+    transition: 1s;
 
+}
+}
 @media screen and (max-width: 1279px) and (min-width: 820px) {
 p {
     font-size: calc(16px + 16 * (100vw / 1280));
